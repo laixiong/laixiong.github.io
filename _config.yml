@@ -1,32 +1,39 @@
 baseurl:/laixiong.github.io
+permalink: /:year/:month/:day/:title.html
+paginate: 10
+markdown: redcarpet
 
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
+# 作者信息
+author: 
+  name:
+  email: 
+  github: 
+  music: 
+  linkedin: 
 
-# Setup
-title:               Poole
-tagline:             The Jekyll Butler
-url:                 http://getpoole.com
-paginate:            1
-baseurl:             ""
+# 站点信息
+title:
+description: My personal blog
+url: http://laixiong.net
+rss_url: /pages/atom.xml
 
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
+# gavatar头像及Favicon
+gavatar: 
+favicon: 
 
-# About/contact
-author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+# disqus 设置
+disqus:
+  shortname: laixiong
 
-# Custom vars
-version:             2.0.0
-github:
-  repo:              https://github.com/poole/poole
+
+# 首页除了最新文章外显示分类
+cates: 
+  - Optimization
+  - LaTeX
+
+# 中文本地化
+locals:
+  tags: 标签
+  about: 关于
+  newest: 最新文章
+  archive: 归档
