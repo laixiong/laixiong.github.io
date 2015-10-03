@@ -22,14 +22,17 @@ centos 6.3
 日志：  
 2015-10-01   
 经过一天的努力，终于将各节点的ssh信任搞定了。  
-目前只写了prepare.sh 和ssh_expect两个脚本，功能还不是很完善。  
+目前只写了`prepare.sh` 和`ssh_expect`两个脚本，功能还不是很完善。  
 2个比较难搞的问题：  
-a.单行数据去重，比如"hosta hostb hostc hostb hostd hosta"，搞了变天还是要借助于awk的数组
-    awk 'BEGIN {RS=ORS=" "}!a[$0]++',要注意的是要在行后手动追加个空格，最后一个会有问题。  
+a.单行数据去重，比如"hosta hostb hostc hostb hostd hosta"，搞了变天还是要借助于awk的数组  
+
+    awk 'BEGIN {RS=ORS=" "}!a[$0]++',
+    要注意的是要在行后手动追加个空格，最后一个会有问题。  
 b.expect问题，听说最后要多加一个无关紧要的expect，否则最后一个expect不执行，不知道真假啊，反正加一个吧，
-但我怀疑是以为说这话的是没有加exp_continue,我就遇到过脚本里没加，怎么都跑不通，最后这个timeout之后怎么捕获error code还是没学会。
+但我怀疑是以为说这话的是没有加**exp_continue**,我就遇到过脚本里没加，怎么都跑不通，最后这个timeout之后怎么捕获error code还是没学会。
 
 2015-10-03
-判断集群中的系统版本是否一致，提示too many arguments,原来下面的命令有空格，要加""或者将[]改成[[]]
+判断集群中的系统版本是否一致，提示too many arguments,原来下面的命令有空格，要加""或者将[]改成[[]]  
+
 	osVersion=`cat /etc/redhat-release`
 
