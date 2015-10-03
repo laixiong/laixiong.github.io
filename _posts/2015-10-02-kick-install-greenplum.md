@@ -1,7 +1,3 @@
-  
-  
-  
-  
 ##kick install greenplum cluster
 
 从今天开始，作为晚上个人修炼项目，我将尝试执行一键安装包，其中greenplum是第一个。  
