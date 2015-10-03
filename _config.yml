@@ -1,6 +1,7 @@
 baseurl: /laixiong.github.io
 permalink: /:year/:month/:day/:title.html
 paginate: 10
+pygments: true
 markdown: redcarpet
 
 title: laixiong github blog
