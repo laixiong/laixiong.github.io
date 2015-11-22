@@ -14,13 +14,15 @@ tmpfs  /dev/shm   tmpfs   defaults     0 0
 mount -o remount /dev/shm  
 
 再查一下看起来是生效了，怪就怪在重启后竟然失效了。   
+
 再百度一下，原来，这个问题应该是系统的一个bug，    
+
 在redhat的bugzilla中可查（ https://bugzilla.redhat.com/show_bug.cgi?id=669700 ），  
 针对这个也有一个解决办法，如下：  
 
 编辑/etc/rc.d/rc.sysinit  
 
-#vim /etc/rc.d/rc.sysinit  
+vim /etc/rc.d/rc.sysinit  
 
 修改前： mount -f /dev/shm >/dev/null 2>&1  
 
